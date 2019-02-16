@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <link rel="icon" href="favicon.ico" type="image/ico" sizes="16x16">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Mission Mitigations!</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+</style>
+
+
+  </head>
+  <body>
+<div class="header">
+  <h2></h2>
+  <h2>Here API's</h2>
+  <p>In Mission Mitigation App</p>
+  <p>Powered by XYZ</p>
+</div>
+
+<div class="topnav">
+</div>
+
+<script src="http://js.api.here.com/v3/3.0/mapsjs-core.js"   type="text/javascript" charset="utf-8">
+
+</script> 
+<script src="http://js.api.here.com/v3/3.0/mapsjs-service.js" type="text/javascript" charset="utf-8"></script> 
+ 
+ <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-core.js"></script>
+<script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-service.js"></script>
+<script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-ui.js"></script>
+<script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-mapevents.js"></script>
+
+<div class="row"  style="margin-left:2%; margin-right:2%;" >
+  
+  <div class="column" style="height:30%;">
+    <h2><B>Here Maps API</B></h2>
+	<div id="map" style="width: 100%; height: 400px; background: grey" > </div>
+	</div>
+ 
+  <div class="column" style="height:30%;">
+    <h2><B>Usage in Current Case Scenario</B></h2>
+	<p> 
+	The state of calamities and disaster is a tough time. Countless people get strucked in such situations. </p>
+	<p>As a measure of relief, we can use the Mission Mitigation app to reduce the panic and chaos in the situation.</p>
+	<p>Here API might play an important role here. In the Mitigation app, we have mentioned featues like <strong>Weather alerts, SOS, Tracking, Positioning </strong>etc. Here API's can give a good quality inputs here.</p>
+	<Br><Br>
+	<p><B>Here Tracking API</B> can help in understanding the disaster prone area as well as getting the best routes for the helping hands or the Rescue Team Heading in that directions.</p>
+	<p><B>Here Positioning API</B> can be used in positioning of the current pinpoint location of the user. This could help the Rescue team to look at the exact location which could safe lives.</p>
+	<p><B>Destination Weather API</B> can help us in proving alerts and warnings about the weather changes at the place and could help the user in judging the current scenario.</p>
+	<p><B>Here MAP API</B> can be used with the XYZ API to assist in evacuating the place in the best possible route.</p>
+	</div>
+
+ 
+  <div class="column" style="height:30%;">
+    <h3><B>Destination Weather API</B></h3>
+	<p>The current weather alerts could be helpful for the users strucked in the calamity and could use the alerts to atleast evacuate the place immediately.</p>
+	<p>https://developer.here.com/documentation/weather/topics/example-severe-weather-alerts.html</p>
+	<br>
+	<h3><B>HERE Tracking</B></h3>
+	<p>The Maps API provides a means of retrieving and displaying traffic data on the map for major urban areas around the globe.</p>
+	<p>https://developer.here.com/documentation/maps/topics/traffic.html</p>
+	<br>
+	<h3><B>Positioning API</B></h3>
+	<p>The HERE Positioning API enables developers to build applications that require location estimates based on radio network measurement data. The supported measurement data includes 2G, 3G, 4G, and WLAN measurements. We could even include the GPS data that we could fetch out here to locate the exact user locations.</p>
+	<p>https://developer.here.com/documentation/positioning/topics/what-is.html</p>
+  </div>
+ 
+      <script  type="text/javascript" charset="UTF-8" >
+    
+/**
+ * Moves the map to display over Berlin
+ *
+ * @param  {H.Map} map      A HERE Map instance within the application
+ */
+function moveMapToKalyan(map){
+  map.setCenter({lat: 19.24, lng: 73.13  });
+  map.setZoom(14);
+}
+/**
+ * Boilerplate map initialization code starts below:
+ */
+
+//Step 1: initialize communication with the platform
+var platform = new H.service.Platform({
+  app_id: 'devportal-demo-20180625',
+  app_code: '9v2BkviRwi9Ot26kp2IysQ',
+  useHTTPS: true
+});
+var pixelRatio = window.devicePixelRatio || 1;
+var defaultLayers = platform.createDefaultLayers({
+  tileSize: pixelRatio === 1 ? 256 : 512,
+  ppi: pixelRatio === 1 ? undefined : 320
+});
+
+//Step 2: initialize a map  - not specificing a location will give a whole world view.
+var map = new H.Map(document.getElementById('map'),
+  defaultLayers.normal.map, {pixelRatio: pixelRatio});
+
+//Step 3: make the map interactive
+// MapEvents enables the event system
+// Behavior implements default interactions for pan/zoom (also on mobile touch environments)
+var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
+
+// Create the default UI components
+var ui = H.ui.UI.createDefault(map, defaultLayers);
+
+// Now use the map as required...
+moveMapToKalyan(map);
+  </script>
+
+	
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+<div class="container">
+	<ul class="pager">
+	  <br>
+  <br><br>
+  <br><br>
+    <li class="previous"><a href="Issuethree.html">Previous</a></li>
+    <li class="next"><a href="Issuefive.html">Next</a></li>
+  </ul>
+</div>
+  </body>
+</html>

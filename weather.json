@@ -1,0 +1,32 @@
+{
+  "alerts": {
+  "alerts": [
+    {
+    "timeSegment": [
+      {
+      "value": "",
+      "segment": "N",
+      "otherAttributes": {},
+      "day_of_week": "3"
+      },
+      {
+      "value": "",
+      "segment": "M",
+      "otherAttributes": {},
+      "day_of_week": "4"
+      }
+    ],
+    "type": "17",
+    "description": "Wind chill alert"
+    }
+  ],
+  "country": "India",
+  "state": "Maharashtra",
+  "city": "Kalyan",
+  "latitude": 19.24,
+  "longitude": 73.13,
+  "timezone": +5.30
+  },
+  "feedCreation": "2013-12-10T14:59:31.188",
+  "metric": true
+}
